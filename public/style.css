@@ -1,0 +1,585 @@
+@import "reset.css";
+
+@font-face {
+    font-family: '13';
+    src: url('fonts/RobotoSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '13';
+    src: url('fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: '13';
+    background-color: #94C6F2;
+    min-height: 100%;
+}
+
+header {
+    height: 1rem;
+    position: fixed;
+}
+
+header h1 {
+    position: absolute;
+    font-size: 32px;
+    top: -1.8rem;
+    color: #F2F2F2;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+}
+
+a {
+    text-decoration: none;
+    cursor: default;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    min-height: 2.5rem;
+    background-color: #010B40;
+    box-shadow: inset 5px 5px 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem;
+    box-sizing: border-box;
+}
+
+nav p {
+    position: absolute;
+    display: block;
+    padding: 0.3rem;
+    right: 20%;
+    top: -1.4rem;;
+    font-size: 12px;
+    z-index: 11;
+    color: #F2F2F2;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+    transition-delay: 0.02s;
+    border-radius: 20px;
+}
+
+nav button {
+    font-family: '13';
+    border: none;
+    font-size: 16px;
+    padding: 0.2rem;
+    color: #F2F2F2;
+    background-color: #010B40;
+    cursor: pointer;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+nav button:hover {
+    color: #010B40;
+    background-color: #F2F2F2;
+    transition-delay: 0.02s;
+    border-radius: 20px;
+}
+
+.news-button {
+    background-color: darkred;
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: black 4px 4px 4px;
+}
+
+.menu-list {
+    position: absolute;
+    background-color: #010B40;
+    color: #F2F2F2;
+    padding: 0.4rem;
+    display: none;
+}
+
+.navigation-menu-button:hover .menu-list {
+    display: block;
+}
+
+.menu-list li {
+    padding: 0.2rem;
+    font-size: 12px;
+    color: #F2F2F2;
+}
+
+.menu-list li:hover {
+    color: #010B40;
+    background-color: #F2F2F2;
+    transition-delay: 0.02s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header-placeholder {
+    clear: both;
+    width: 65%;
+    background-color: #94C6F2;
+    margin: 0 auto;
+    min-height: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+/* -- GENERAL CONTENT -- */
+
+/* ARTICLES LIST */
+
+main {
+    clear: both;
+    width: 70%;
+    background-color: rgba(242, 238, 172, 0.86);
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
+    margin-top: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+
+}
+
+section {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+section h3 {
+    text-decoration: underline solid darkred 0.3rem;
+    text-decoration-skip-ink: none;
+    display: block;
+    padding: 0.2rem;
+    font-size: 25px;
+}
+
+section h4 {
+    text-decoration: underline solid rgba(1, 11, 64, 0.51) 0.3rem;
+    text-decoration-skip-ink: none;
+    display: block;
+    padding: 0.2rem;
+    font-size: 20px;
+}
+
+section span {
+    margin-left: 1rem;
+}
+
+.news-list {
+    clear: both;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-news {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section h3, h4, span, p, ul, li {
+    margin: 0.4rem;
+}
+
+section li {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+section ul {
+    margin-top: 0.5rem;
+}
+
+.article-date-author {
+    text-align: left;
+    font-size: 10px;
+}
+
+li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #010B40;
+}
+
+li a:hover {
+    background-color: #F2F2F2;
+}
+
+/* ARTICLE */
+
+.article-view {
+    margin: 1.5rem;
+    line-height: 1.5;
+}
+
+.article-view h2 {
+    font-size: 38px;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.article-view h3 {
+    font-size: 22px;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.article-details {
+    text-align: right;
+}
+
+.create-comment {
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.create-comment textarea {
+    margin: 0 auto;
+    width: 80%;
+    height: 4rem;
+}
+
+.create-comment button {
+    margin: 1rem;
+    float: right;
+}
+
+.create-comment p {
+    margin: 0.5rem;
+}
+
+.comment-list {
+    margin: 0 auto;
+    background-color: rgba(242, 242, 242, 0.68);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+}
+
+.comment-list h4 {
+    clear: both;
+    text-align: right;
+}
+
+/* AUTHORISATION */
+
+.authorisation-window {
+    background: #010B40;
+    margin: 0 auto;
+    width: 20rem;
+    height: 12rem;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    box-shadow: 5px 5px 1px black;
+}
+
+.authorisation-window h2 {
+    display: block;
+    background-color: darkred;
+    width: 100%;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.authorisation-window form {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 15rem;
+    height: 6rem;
+}
+
+.authorisation-window label {
+    display: block;
+    margin: 0.5rem;
+}
+
+.authorisation-window button {
+    margin-top: 0.7rem;
+    float: right;
+    background-color: darkred;
+    color: #F2F2F2;
+    cursor: pointer;
+    font-family: '13';
+}
+
+/* REGISTRATION */
+
+.registration-window {
+    background: #010B40;
+    margin: 0 auto;
+    width: 20rem;
+    height: 15rem;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    box-shadow: 5px 5px 1px black;
+}
+
+.registration-window h2 {
+    display: block;
+    background-color: darkred;
+    width: 100%;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.registration-window form {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 15rem;
+    height: 6rem;
+}
+
+.registration-window label {
+    display: block;
+    margin: 0.5rem;
+}
+
+.registration-window button {
+    margin-top: 0.7rem;
+    float: right;
+    background-color: darkred;
+    color: #F2F2F2;
+    cursor: pointer;
+    font-family: '13';
+}
+
+/* SEARCH */
+
+.search-window {
+    background: #010B40;
+    margin: 0 auto;
+    width: 50rem;
+    min-height: 20rem;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    box-shadow: 5px 5px 1px black;
+}
+
+.search-window h2 {
+    display: block;
+    background-color: darkred;
+    width: 100%;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.search-window form {
+    padding: 0.6rem;
+}
+
+.search-window input {
+    width: 16rem;
+    margin-left: 1rem;
+}
+
+.search-window button {
+    background-color: darkred;
+    color: #F2F2F2;
+    cursor: pointer;
+    font-family: '13';
+    margin-left: 0.5rem;
+}
+
+/* SETTINGS */
+
+.settings-window {
+    background: #010B40;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    width: 40%;
+    min-height: 50%;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    box-shadow: 5px 5px 1px black;
+}
+
+.settings-window h2 {
+    display: block;
+    background-color: darkred;
+    width: 100%;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.settings-window h3 {
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.settings-window form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.settings-window input {
+    width: 90%;
+}
+
+.settings-window label {
+    display: block;
+    margin: 0.5rem;
+}
+
+.settings-window button {
+    margin-top: 5%;
+    margin-left: 50%;
+    background-color: darkred;
+    color: #F2F2F2;
+    cursor: pointer;
+    font-family: '13';
+}
+
+/* ADMIN PANEL */
+
+.panel-window {
+    background: #010B40;
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    box-shadow: 5px 5px 1px black;
+    padding-bottom: 1rem;
+}
+
+.panel-window h2 {
+    display: block;
+    background-color: darkred;
+    width: 100%;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    margin-bottom: 0.2rem;
+}
+
+.panel-options {
+    float: left;
+    box-sizing: border-box;
+    width: 13%;
+    flex-direction: column;
+}
+
+.panel-options button {
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 80%;
+    padding-left: 1rem;
+    background-color: #010B40;
+    color: #F2F2F2;
+    font-family: '13';
+    cursor: pointer;
+    border-color: #F2F2F2;
+}
+
+.panel-options button:hover {
+    color: #010B40;
+    background-color: #F2F2F2;
+    transition-delay: 0.02s;
+    cursor: pointer;
+}
+
+.panel-field {
+    background-color: rgba(242, 242, 242, 0.25);
+    margin-left: 12rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    max-width: 85%;
+    min-height: 15rem;
+}
+
+.panel-field li {
+    margin: 1rem;
+}
+
+.panel-field table {
+    width: 100%;
+}
+
+.panel-field th {
+    color: white;
+    background-color: darkred;
+}
+
+.panel-field th, td {
+    border: solid 1px;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+td button {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+    margin: 0;
+    border: 0px;
+}
+
+td span {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+td form {
+    margin: 0 auto;
+}
+
+td img {
+    margin-top: 0rem;
+    padding: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+td img:hover {
+    background-color: #F2F2F2;
+}
+
+/* ARTICLES */
+
+.article-field {
+    padding: 0.5rem;
+}
+
+.article-field label, input, select, textarea {
+    display: block;
+    margin: 0.5rem;
+}
+
+.article-field textarea, input {
+    width: 80%;
+}
+
+.button-send-article {
+    display: block;
+    margin: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    clear: both;
+    width: 100%;
+    height: 10rem;
+    background-color: #010B40;
+    margin-top: 2rem;
+}
