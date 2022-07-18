@@ -8,7 +8,7 @@ class AdminController extends UserController
     {
         if (isset($_POST['statususer'])) {
             $userID = $_POST['statususer'];
-            $checkUser = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_ID, $userID);
+            $checkUser = $this->db->getRecords(UsersTable::NAME, UsersTable::ID_COLUMN, $userID);
             $statusColumn = ['user_status'];
             $newStatus = [];
             if ($checkUser[0]['user_status'] === 'User') {
@@ -16,7 +16,7 @@ class AdminController extends UserController
             } else {
                 $newStatus = ['User'];
             }
-            $this->db->editRecord(DatabaseProperties::USERSTAB_NAME, $statusColumn, $newStatus, DatabaseProperties::USERSTAB_ID, $userID);
+            $this->db->editRecord(UsersTable::NAME, $statusColumn, $newStatus, UsersTable::ID_COLUMN, $userID);
         }
     }
 

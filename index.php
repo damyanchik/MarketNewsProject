@@ -1,4 +1,7 @@
 <?php
+
+
+
 session_start();
 
 require_once('src/controller/AbstractController.php');
@@ -9,9 +12,11 @@ require('src/controller/CommentController.php');
 require('src/controller/AdminController.php');
 require('src/controller/ArticlesController.php');
 require('src/config/db.php');
-require('src/Validator.php');
+require('src/Validation.php');
 require('src/View.php');
-require('src/DatabaseProperties.php');
+require('src/model/articlestab.php');
+require('src/model/commentstab.php');
+require('src/model/userstab.php');
 
 
 

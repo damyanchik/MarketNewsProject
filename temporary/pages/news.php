@@ -1,12 +1,12 @@
 <?php
-$rowN = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME);
-$rowC = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_COUNTRY);
-$rowW = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_WORLD);
-$rowB = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_BUS);
-$rowP = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_POLICY);
-$rowT = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_TRENDS);
-$rowF = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_FIN);
-$rowI = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, DatabaseProperties::ARTICLESTAB_TAG_INVEST);
+$rowN = $this->db->getRecords(ArticlesTable::NAME);
+$rowC = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_COUNTRY);
+$rowW = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_WORLD);
+$rowB = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_BUS);
+$rowP = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_POLICY);
+$rowT = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_TRENDS);
+$rowF = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_FIN);
+$rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, ArticlesTable::TAG_INVEST);
 ?>
 <main>
     <div class="news-list">

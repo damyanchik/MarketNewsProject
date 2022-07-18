@@ -16,7 +16,7 @@ class ArticlesController
             foreach ($variables as $value) {
                 $newArticle[] = $value;
             }
-            $this->db->createRecord(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_COLUMNS, $newArticle);
+            $this->db->createRecord(ArticlesTable::NAME, ArticlesTable::COLUMNS, $newArticle);
         }
     }
 
@@ -33,7 +33,7 @@ class ArticlesController
             foreach ($variables as $value) {
                 $newArticle[] = $value;
             }
-            $this->db->editRecord(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_COLUMNS, $newArticle, DatabaseProperties::ARTICLESTAB_ID, $editID);
+            $this->db->editRecord(ArticlesTable::NAME, ArticlesTable::COLUMNS, $newArticle, ArticlesTable::ID_COLUMN, $editID);
         }
     }
 
@@ -41,7 +41,7 @@ class ArticlesController
     {
         if (isset($_POST['deleteRecord'])) {
             $deleteID = $_POST['deleteRecord'];
-            $this->db->deleteRecord(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_ID, $deleteID);
+            $this->db->deleteRecord(ArticlesTable::NAME, ArticlesTable::ID_COLUMN, $deleteID);
         }
     }
 

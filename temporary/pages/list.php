@@ -1,5 +1,5 @@
 <?php
-$row = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_TAG, $_GET['section']);
+$row = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, $_GET['section']);
 ?>
 <main>
     <div class="section-news">

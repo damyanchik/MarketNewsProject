@@ -1,5 +1,5 @@
 <?php
-$row = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME);
+$row = $this->db->getRecords(UsersTable::NAME);
 ?>
 
 <h2>Operacje na użytkownikach</h2>

@@ -1,6 +1,6 @@
 <?php
-    $row = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_ID, $_GET['article']);
-    $rowsCom = $this->db->getRecords(DatabaseProperties::COMMENTSTAB_NAME, DatabaseProperties::COMMENTSTAB_ARTICLE_ID, $_GET['article']);
+    $row = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::ID_COLUMN, $_GET['article']);
+    $rowsCom = $this->db->getRecords(CommentsTable::NAME, CommentsTable::ARTICLE_ID_COLUMN, $_GET['article']);
     ?>
 <main>
     <article class="article-view">
@@ -17,7 +17,7 @@
     </form>
     <?php for ($i = (count($rowsCom) - 1); $i >= 0; $i--) { ?>
     <div class="comment-list">
-        <?php $rowsUsers = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_ID, $rowsCom[$i]['comment_author_id']); ?>
+        <?php $rowsUsers = $this->db->getRecords(UsersTable::NAME, UsersTable::ID_COLUMN, $rowsCom[$i]['comment_author_id']); ?>
         <h4>
             <?php echo 'Autor: ' . $rowsUsers[0]['user_login'] . ' Data: ' . $rowsCom[$i]['comment_createddate'];
             if ($rowsUsers[0]['user_login'] === $_SESSION['login']) {

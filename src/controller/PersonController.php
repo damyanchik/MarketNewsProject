@@ -11,7 +11,7 @@ class PersonController extends AbstractController
             if (!empty($login) || !empty($password)) {
 
                 $columnLogin = 'user_login';
-                $result = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_LOGIN, $login);
+                $result = $this->db->getRecords(UsersTable::NAME, UsersTable::LOGIN_COLUMN, $login);
                 $hash = $result[0]['user_password'];
 
                 if ($result[0]['user_login'] === $login && password_verify($password, $hash)) {
@@ -63,24 +63,24 @@ class PersonController extends AbstractController
             $email = $this->post['email'];
 
             if (!empty($login) && !empty($password) && !empty($email)) {
-                $checkEmail = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_EMAIL, $email);
-                $checkLogin = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_LOGIN, $login);
+                $checkEmail = $this->db->getRecords(UsersTable::NAME, UsersTable::EMAIL_COLUMN, $email);
+                $checkLogin = $this->db->getRecords(UsersTable::NAME, UsersTable::LOGIN_COLUMN, $login);
 
                 if (empty($checkEmail) && empty($checkLogin)) {
 
-                    if (Validator::validateLogin($login)) {
+                    if (Validation::validateLogin($login)) {
                         $loginValidated = $login;
                     } else {
                         return 'BŁĄD W LOGINIE';
                     }
 
-                    if (Validator::validatePassword($password)) {
+                    if (Validation::validatePassword($password)) {
                         $passwordValidated = password_hash($password, PASSWORD_DEFAULT);
                     } else {
                         return 'BŁĄD W HAŚLE';
                     }
 
-                    if (Validator::validateEmail($email)) {
+                    if (Validation::validateEmail($email)) {
                         $emailValidated = $email;
                     } else {
                         echo "Zły format email";
@@ -88,7 +88,7 @@ class PersonController extends AbstractController
 
                     if (!empty($loginValidated) && !empty($passwordValidated) && !empty($emailValidated)) {
                         $newRecords = [$loginValidated, $emailValidated, $passwordValidated, 'User'];
-                        $this->db->createRecord(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_COLUMNS, $newRecords);
+                        $this->db->createRecord(UsersTable::NAME, UsersTable::COLUMNS, $newRecords);
                         echo 'Rejestracja zakończona';
                     }
 

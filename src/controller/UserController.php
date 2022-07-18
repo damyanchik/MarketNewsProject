@@ -8,7 +8,7 @@ class UserController extends GuestController
     private function loadUserDetails() : void
     {
         if (isset($_SESSION['person']) && isset($_SESSION['login'])) {
-            $this->userDetails = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_LOGIN, $_SESSION['login']);
+            $this->userDetails = $this->db->getRecords(UsersTable::NAME, UsersTable::LOGIN_COLUMN, $_SESSION['login']);
         }
     }
 
@@ -18,16 +18,16 @@ class UserController extends GuestController
             $newEmail = $_POST['newEmail'];
             $password = $_POST['confirmPassword'];
 
-            $checkNewEmail = $this->db->getRecords(DatabaseProperties::USERSTAB_NAME, DatabaseProperties::USERSTAB_EMAIL, $newEmail);
+            $checkNewEmail = $this->db->getRecords(UsersTable::NAME, UsersTable::EMAIL_COLUMN, $newEmail);
 
             if (empty($checkNewEmail)) {
-                if (Validator::validateEmail($newEmail)) {
+                if (Validation::validateEmail($newEmail)) {
                     if (password_verify($password, $this->userDetails[0]['user_password'])) {
                         $editedEmail = [];
                         $editedEmail = [$newEmail];
                         $emailColumn = [];
-                        $emailColumn = [DatabaseProperties::USERSTAB_EMAIL];
-                        $this->db->editRecord(DatabaseProperties::USERSTAB_NAME, $emailColumn, $editedEmail, DatabaseProperties::USERSTAB_ID, $this->userDetails[0]['user_id']);
+                        $emailColumn = [UsersTable::EMAIL_COLUMN];
+                        $this->db->editRecord(UsersTable::NAME, $emailColumn, $editedEmail, UsersTable::ID_COLUMN, $this->userDetails[0]['user_id']);
                         echo 'Zmieniono email.';
                     } else {
                         echo 'Podane hasło jest niepoprawne.';
@@ -48,14 +48,14 @@ class UserController extends GuestController
             $newPass = $_POST['newPassword'];
 
             if (password_verify($oldPass, $this->userDetails[0]['user_password'])) {
-                if (Validator::validatePassword($newPass)) {
+                if (Validation::validatePassword($newPass)) {
                     $editedPass = [];
                     $hash = password_hash($newPass, PASSWORD_DEFAULT);
                     $editedPass = [$hash];
                     $passColumn = [];
-                    $passColumn = [DatabaseProperties::USERSTAB_PASSWORD];
-                    $this->db->editRecord(DatabaseProperties::USERSTAB_NAME, $passColumn, $editedPass, DatabaseProperties::USERSTAB_ID, $this->userDetails[0]['user_id']);
-                    echo 'zmieniono hasło';
+                    $passColumn = [UsersTable::PASSWORD_COLUMN];
+                    $this->db->editRecord(UsersTable::NAME, $passColumn, $editedPass, UsersTable::ID_COLUMN, $this->userDetails[0]['user_id']);
+                    echo 'Zmieniono hasło.';
                 } else {
                     echo 'Hasło powinno zawierać więcej niż 6 znaków i mniej niż 20 znaków.';
                 }

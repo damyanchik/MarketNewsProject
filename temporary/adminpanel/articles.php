@@ -1,5 +1,5 @@
 <?php
-    $row = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME);
+    $row = $this->db->getRecords(ArticlesTable::NAME);
     $editID = $_POST['selectArticle'] ?? null;
 if (isset($_POST['sendArticle']) || isset($_POST['deleteRecord'])) {
     header('refresh: 0');
@@ -21,7 +21,7 @@ if (isset($_POST['newArticle']) || isset($_POST['selectArticle'])) {
         } else if (isset($_POST['selectArticle'])) {
             echo 'Edycja artykułu';
             $buttonName = 'editArticle';
-            $editArticle = $this->db->getRecords(DatabaseProperties::ARTICLESTAB_NAME, DatabaseProperties::ARTICLESTAB_ID, $editID);
+            $editArticle = $this->db->getRecords(ArticlesTable::NAME, UsersTable::ID_COLUMN, $editID);
             $titleValue = $editArticle[0]['article_title'];
             $headerValue = $editArticle[0]['article_header'];
             $tagValue = $editArticle[0]['article_tag'];
