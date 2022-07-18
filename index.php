@@ -1,7 +1,4 @@
 <?php
-
-
-
 session_start();
 
 require_once('src/controller/AbstractController.php');
@@ -17,10 +14,7 @@ require('src/View.php');
 require('src/model/articlestab.php');
 require('src/model/commentstab.php');
 require('src/model/userstab.php');
-
-
-
-include('src/controller/PersonController.php');
+require('src/controller/PersonController.php');
 
 $start = new PersonController($_POST, $_GET, $db);
 //$user = new UserController($db);

@@ -14,7 +14,7 @@
             <h1>Market.news</h1>
         </header>
             <nav>
-                <p> <?php if ($_SESSION['person'] === 'User' || $_SESSION['person'] === 'Admin')
+                <p> <?php if (isset($_SESSION['person']) && ($_SESSION['person'] === 'User' xor $_SESSION['person'] === 'Admin'))
                         echo $_SESSION['login'] . ',' . ' ' . 'jesteś zalogowany!'; ?> </p>
                 <div class="navigation-buttons">
                     <a href="?action=news">
@@ -50,6 +50,7 @@
                                 <li>
                                     Szukaj
                                 </li>
+                            </a>
                                 <?php if (!isset($_SESSION['person'])) { ?>
                             <a href="?action=auth">
                                 <li>
@@ -67,7 +68,7 @@
                                     Panel administratora
                                 </li>
                             </a>
-                                <?php } if ($_SESSION['person'] === 'User' || $_SESSION['person'] === 'Admin') { ?>
+                                <?php } if (isset($_SESSION['person']) && ($_SESSION['person'] === 'User' xor $_SESSION['person'] === 'Admin')) { ?>
                             <a href="?action=settings">
                                 <li>
                                     Ustawienia

@@ -7,7 +7,7 @@ if (isset($_POST['sendArticle']) || isset($_POST['deleteRecord'])) {
 
 if (isset($_POST['deleteArticle'])) {
     echo '<h2>Czy chcesz usunąć pozycję o ID:' . $_POST['deleteArticle'] . '?</h2>';
-    echo '<form method="post"><button name="deleteRecord" type="submit" value="' . $_POST['deleteArticle'] . '">Tak</button><button>Nie</button></form>';
+    echo '<form method="post" class="delete-yes-no-buttons"><button name="deleteRecord" type="submit" value="' . $_POST['deleteArticle'] . '">Tak</button><button>Nie</button></form>';
 }
 
 if (isset($_POST['newArticle']) || isset($_POST['selectArticle'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['newArticle']) || isset($_POST['selectArticle'])) {
         } else if (isset($_POST['selectArticle'])) {
             echo 'Edycja artykułu';
             $buttonName = 'editArticle';
-            $editArticle = $this->db->getRecords(ArticlesTable::NAME, UsersTable::ID_COLUMN, $editID);
+            $editArticle = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::ID_COLUMN, $editID);
             $titleValue = $editArticle[0]['article_title'];
             $headerValue = $editArticle[0]['article_header'];
             $tagValue = $editArticle[0]['article_tag'];
@@ -57,12 +57,12 @@ if (isset($_POST['newArticle']) || isset($_POST['selectArticle'])) {
 <h2>Działania na artykułach</h2>
 
 <div class="articles-panel">
-    <div class="articles-header">
+    <div class="articles-top">
         <form method="post" class="search-article">
             <input type="text">
             <button>Szukaj</button>
         </form>
-        <form method="post">
+        <form method="post" class="button-create-article">
             <button type="submit" name="newArticle">Stwórz artykuł</button>
         </form>
     </div>

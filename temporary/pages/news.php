@@ -19,7 +19,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
                         for ($i = (count($rowN) - 1); $i >= $this->newsOrder($rowN); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowN[$i]['article_id'] . '"> > ' . $rowN[$i]['article_title'] . ' ' . $rowN[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowN[$i]['article_id'] . '"><h4>' . $rowN[$i]['article_title'] . '</h4> ' . $rowN[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowN[$i]['article_author'] . ' Data: ' . $rowN[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -28,14 +28,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>KRAJ</h4>
+            <h3>KRAJ</h3>
             <article>
                 <span>Aktualne informacje z kraju!</span>
                 <ul>
                     <?php for ($i = (count($rowC) - 1); $i >= $this->newsOrder($rowC); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowC[$i]['article_id'] . '"> > ' . $rowC[$i]['article_title'] . ' ' . $rowC[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowC[$i]['article_id'] . '"><h4>' . $rowC[$i]['article_title'] . '</h4> ' . $rowC[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowC[$i]['article_author'] . ' Data: ' . $rowC[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -44,14 +44,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>ŚWIAT</h4>
+            <h3>ŚWIAT</h3>
             <article>
                 <span>Bądź na czasie z wiadomościami ze świata!</span>
                 <ul>
                     <?php for ($i = (count($rowW) - 1); $i >= $this->newsOrder($rowW); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowW[$i]['article_id'] . '"> > ' . $rowW[$i]['article_title'] . ' ' . $rowW[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowW[$i]['article_id'] . '"><h4>' . $rowW[$i]['article_title'] . '</h4> ' . $rowW[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowW[$i]['article_author'] . ' Data: ' . $rowW[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -60,14 +60,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>BIZNES</h4>
+            <h3>BIZNES</h3>
             <article>
                 <span>Najświeższe wiadomości z biznesu!</span>
                 <ul>
                     <?php for ($i = (count($rowB) - 1); $i >= $this->newsOrder($rowB); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowB[$i]['article_id'] . '"> > ' . $rowB[$i]['article_title'] . ' ' . $rowB[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowB[$i]['article_id'] . '"><h4>' . $rowB[$i]['article_title'] . '</h4> ' . $rowB[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowB[$i]['article_author'] . ' Data: ' . $rowB[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -76,14 +76,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>POLITYKA</h4>
+            <h3>POLITYKA</h3>
             <article>
                 <span>Ważne wiadomości polityczne!</span>
                 <ul>
                     <?php for ($i = (count($rowP) - 1); $i >= $this->newsOrder($rowP); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowP[$i]['article_id'] . '"> > ' . $rowP[$i]['article_title'] . ' ' . $rowP[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowP[$i]['article_id'] . '"><h4>' . $rowP[$i]['article_title'] . '</h4> ' . $rowP[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowP[$i]['article_author'] . ' Data: ' . $rowP[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -92,14 +92,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>TRENDY</h4>
+            <h3>TRENDY</h3>
             <article>
                 <span>O tym się teraz mówi!</span>
                 <ul>
                     <?php for ($i = (count($rowT) - 1); $i >= $this->newsOrder($rowT); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowT[$i]['article_id'] . '"> > ' . $rowT[$i]['article_title'] . ' ' . $rowT[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowT[$i]['article_id'] . '"><h4>' . $rowT[$i]['article_title'] . '</h4> ' . $rowT[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowT[$i]['article_author'] . ' Data: ' . $rowT[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -108,14 +108,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>FINANSE</h4>
+            <h3>FINANSE</h3>
             <article>
                 <span>Wiadomości finansowe!</span>
                 <ul>
                     <?php for ($i = (count($rowF) - 1); $i >= $this->newsOrder($rowF); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowF[$i]['article_id'] . '"> > ' . $rowF[$i]['article_title'] . ' ' . $rowF[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowF[$i]['article_id'] . '"><h4>' . $rowF[$i]['article_title'] . '</h4> ' . $rowF[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowF[$i]['article_author'] . ' Data: ' . $rowF[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>
@@ -124,14 +124,14 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
             </article>
         </section>
         <section>
-            <h4>INWESTYCJE</h4>
+            <h3>INWESTYCJE</h3>
             <article>
                 <span>Nowe i planowane inwestycje!</span>
                 <ul>
                     <?php for ($i = (count($rowI) - 1); $i >= $this->newsOrder($rowI); $i--) { ?>
                         <li>
                             <?php
-                                echo '<a href="?action=article&article=' . $rowI[$i]['article_id'] . '"> > ' . $rowI[$i]['article_title'] . ' ' . $rowI[$i]['article_header'] . '</a>';
+                                echo '<a href="?action=article&article=' . $rowI[$i]['article_id'] . '"><h4>' . $rowI[$i]['article_title'] . '</h4> ' . $rowI[$i]['article_header'] . '</a>';
                                 echo '<p class="article-date-author"> Autor: ' . $rowI[$i]['article_author'] . ' Data: ' . $rowI[$i]['article_createddate'] . '</p>';
                             ?>
                         </li>

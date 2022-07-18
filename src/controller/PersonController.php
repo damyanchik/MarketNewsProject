@@ -2,6 +2,8 @@
 
 class PersonController extends AbstractController
 {
+    const DEFAULT_STATUS = 'Guest';
+
     public function loginAccount() : void
     {
         if (isset($this->post['authorisation'])) {
@@ -39,9 +41,11 @@ class PersonController extends AbstractController
         }
     }
 
-    protected function personStatus (string $status) : void
+    protected function personStatus () : void
     {
-        switch ($status) {
+        $person = $_SESSION['person'] ?? self::DEFAULT_STATUS;
+
+        switch ($person) {
             case 'User':
                 $user = new UserController($this->db);
                 break;
@@ -108,6 +112,6 @@ class PersonController extends AbstractController
         $this->loginAccount();
         $this->logoutAccount();
         $this->registrationAccount();
-        $this->personStatus($_SESSION['person']);
+        $this->personStatus();
     }
 }

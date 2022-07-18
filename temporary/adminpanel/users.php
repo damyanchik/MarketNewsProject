@@ -4,7 +4,7 @@ $row = $this->db->getRecords(UsersTable::NAME);
 
 <h2>Operacje na użytkownikach</h2>
 <div class="users-panel">
-    <div class="articles-header">
+    <div class="articles-top">
         <form>
             <input>
             <button>Szukaj</button>
@@ -32,22 +32,22 @@ $row = $this->db->getRecords(UsersTable::NAME);
            </td>
            <td>
                 <span>
-                    <?php echo $row[$i]['user_id'] ?>
+                    <?php echo $row[$i]['user_id']; ?>
                 </span>
            </td>
            <td>
                 <span>
-                    <?php echo $row[$i]['user_login'] ?>
+                    <?php echo $row[$i]['user_login']; ?>
                 </span>
            </td>
            <td>
                 <span>
-                    <?php echo $row[$i]['user_email'] ?>
+                    <?php echo $row[$i]['user_email']; ?>
                 </span>
            </td>
            <td>
                 <span>
-                    <?php echo $row[$i]['user_status'] ?>
+                    <?php echo $row[$i]['user_status']; ?>
                 </span>
            </td>
         </tr>
