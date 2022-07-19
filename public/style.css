@@ -20,7 +20,7 @@
 
 body {
     position: relative;
-    font-family: '13';
+    font-family: '13', sans-serif;
     background-color: #94C6F2;
     min-height: 100%;
 }
@@ -71,7 +71,7 @@ nav p {
 }
 
 nav button {
-    font-family: '13';
+    font-family: '13', sans-serif;
     border: none;
     font-size: 16px;
     padding: 0.2rem;
@@ -127,7 +127,6 @@ nav button:hover {
     clear: both;
     width: 65%;
     background-color: #94C6F2;
-    margin: 0 auto;
     min-height: 1rem;
     margin-top: 2rem;
     padding: 1.5rem;
@@ -144,7 +143,6 @@ main {
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 5px 5px 10px;
-    margin-top: 2rem;
     padding: 2rem;
     box-sizing: border-box;
 
@@ -355,7 +353,7 @@ li a h4:hover {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
 }
 
 /* REGISTRATION */
@@ -396,7 +394,7 @@ li a h4:hover {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
 }
 
 /* SEARCH */
@@ -431,7 +429,7 @@ li a h4:hover {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
     margin-left: 0.5rem;
 }
 
@@ -483,7 +481,7 @@ li a h4:hover {
     color: #F2F2F2;
     cursor: pointer;
     font-size: 15px;
-    font-family: '13';
+    font-family: '13', sans-serif;
 }
 
 .settings-window button:hover {
@@ -526,7 +524,7 @@ li a h4:hover {
     background-color: #010B40;
     min-width: 8rem;
     color: #F2F2F2;
-    font-family: '13';
+    font-family: '13', sans-serif;
     cursor: pointer;
     border-color: #F2F2F2;
 }
@@ -572,7 +570,7 @@ td button {
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
     margin: 0;
-    border: 0px;
+    border: none;
 }
 
 td span {
@@ -585,7 +583,6 @@ td form {
 }
 
 td img {
-    margin-top: 0rem;
     padding: 0;
     width: 1.2rem;
     height: 1.2rem;
@@ -618,14 +615,14 @@ td img:hover {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
 }
 
 .delete-yes-no-buttons button {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
     font-size: 18px;
     margin: 0.8rem;
 }
@@ -644,7 +641,7 @@ td img:hover {
     background-color: darkred;
     color: #F2F2F2;
     cursor: pointer;
-    font-family: '13';
+    font-family: '13', sans-serif;
     margin-left: 0.5rem;
 }
 
