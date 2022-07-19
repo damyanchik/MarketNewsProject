@@ -81,10 +81,10 @@ if (isset($_POST['newArticle']) || isset($_POST['selectArticle'])) {
                 <td>
                     <form method="post">
                         <button type="submit" name="deleteArticle" title="Usuwanie artykułu" value=" <?php echo $row[$i]['article_id']; ?> ">
-                            <img src="images/delete.svg">
+                            <img src="images/delete.svg" alt="Delete button icon">
                         </button>
                         <button type="submit" name="selectArticle" title="Edycja artykułu" value=" <?php echo $row[$i]['article_id']; ?> ">
-                            <img src="images/edit.svg">
+                            <img src="images/edit.svg" alt="Edit button icon">
                         </button>
                     </form>
                 </td>

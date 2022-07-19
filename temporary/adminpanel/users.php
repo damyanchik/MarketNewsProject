@@ -23,10 +23,10 @@ $row = $this->db->getRecords(UsersTable::NAME);
            <td>
                <form method="post">
                    <button type="submit" name="blockuser" title="Zablokuj użytkownika" value=" <?php echo $row[$i]['user_id']; ?> ">
-                       <img src="images/block.svg">
+                       <img src="images/block.svg" alt="Block button icon">
                    </button>
                    <button type="submit" name="statususer" title="Zmień status użytkownika" value=" <?php echo $row[$i]['user_id']; ?> ">
-                       <img src="images/status.svg">
+                       <img src="images/status.svg" alt="Flag icon">
                    </button>
                </form>
            </td>

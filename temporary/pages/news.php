@@ -13,7 +13,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>NA CZASIE</h3>
             <article>
-                <span>Sprawdź najnowsze informacje!</span>
+                <img src="images/hot.svg" alt="Fire icon"><span>Sprawdź najnowsze informacje!</span>
                 <ul>
                     <?php
                         for ($i = (count($rowN) - 1); $i >= $this->newsOrder($rowN); $i--) { ?>
@@ -30,7 +30,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>KRAJ</h3>
             <article>
-                <span>Aktualne informacje z kraju!</span>
+                <img src="images/buildings.svg" alt="Buildings icon"><span>Aktualne informacje z kraju!</span>
                 <ul>
                     <?php for ($i = (count($rowC) - 1); $i >= $this->newsOrder($rowC); $i--) { ?>
                         <li>
@@ -46,7 +46,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>ŚWIAT</h3>
             <article>
-                <span>Bądź na czasie z wiadomościami ze świata!</span>
+                <img src="images/globe.svg" alt="Globe icon"><span>Bądź na czasie z wiadomościami ze świata!</span>
                 <ul>
                     <?php for ($i = (count($rowW) - 1); $i >= $this->newsOrder($rowW); $i--) { ?>
                         <li>
@@ -62,7 +62,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>BIZNES</h3>
             <article>
-                <span>Najświeższe wiadomości z biznesu!</span>
+                <img src="images/briefcase.svg" alt="Briefcase icon"><span>Najświeższe wiadomości z biznesu!</span>
                 <ul>
                     <?php for ($i = (count($rowB) - 1); $i >= $this->newsOrder($rowB); $i--) { ?>
                         <li>
@@ -78,7 +78,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>POLITYKA</h3>
             <article>
-                <span>Ważne wiadomości polityczne!</span>
+                <img src="images/building.svg" alt="Building icon"><span>Ważne wiadomości polityczne!</span>
                 <ul>
                     <?php for ($i = (count($rowP) - 1); $i >= $this->newsOrder($rowP); $i--) { ?>
                         <li>
@@ -94,7 +94,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>TRENDY</h3>
             <article>
-                <span>O tym się teraz mówi!</span>
+                <img src="images/chart.svg" alt="Chart icon"><span>O tym się teraz mówi!</span>
                 <ul>
                     <?php for ($i = (count($rowT) - 1); $i >= $this->newsOrder($rowT); $i--) { ?>
                         <li>
@@ -110,7 +110,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>FINANSE</h3>
             <article>
-                <span>Wiadomości finansowe!</span>
+                <img src="images/coins.svg" alt="Coins icon"><span>Wiadomości finansowe!</span>
                 <ul>
                     <?php for ($i = (count($rowF) - 1); $i >= $this->newsOrder($rowF); $i--) { ?>
                         <li>
@@ -126,7 +126,7 @@ $rowI = $this->db->getRecords(ArticlesTable::NAME, ArticlesTable::TAG_COLUMN, Ar
         <section>
             <h3>INWESTYCJE</h3>
             <article>
-                <span>Nowe i planowane inwestycje!</span>
+                <img src="images/bank.svg" alt="Bank icon"><span>Nowe i planowane inwestycje!</span>
                 <ul>
                     <?php for ($i = (count($rowI) - 1); $i >= $this->newsOrder($rowI); $i--) { ?>
                         <li>

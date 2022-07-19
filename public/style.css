@@ -169,7 +169,17 @@ section h4 {
 }
 
 section span {
-    margin-left: 1rem;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 1rem;
+    padding-top: 0.3rem;
+}
+
+article img {
+    float: left;
+    width: 1.5rem;
+    margin-right: 0.2rem;
+    margin-left: 0.6rem;
 }
 
 .news-list {
