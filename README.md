@@ -14,9 +14,7 @@ In this project we have 2 types of account - admin or user. We can create user a
 Admin has access to CMS. This account can publish newses (CRUD), ban users and delete comments.
 
 
-Something about MVC and OOP. I tried to use as little as I could PHP in HTML. AbstractController contains Route, which displays pages from templates with helper View. 
-Folder 'Models' keeps data base structure. DatabaseController responsible for downloading and sending from Database. In folder 'Templates' we have layout with navigation,
-which displays on every page. In addition, we have two folders with templates for Admin Panel and view for users and guest on page.
+Project with MVC and OOP. I tried to use as little as I could PHP in HTML. AbstractController contains Route, which displays pages from templates with helper View. Folder 'Models' keeps data base structure. DatabaseController responsible for downloading and sending from Database. In folder 'Templates' we have layout with navigation, which displays on every page. In addition, we have two folders with templates for Admin Panel and view for users and guest on page.
 
 
 ## Technologies
